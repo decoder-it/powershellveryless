@@ -7,5 +7,6 @@ C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe /reference: C:\Windows\M
 /out:c:\setup\powerveryless.exe c:\scripts\powerveryless.cs
 ```
 <br />
- Launch it: powerhsellveryless.exe <your_ps_sript><br />
+ Launch it: powerhsellveryless.exe (your_ps1_sript)
+ <br />
 
