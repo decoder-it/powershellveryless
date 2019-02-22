@@ -11,5 +11,5 @@ Launch it: powerhsellveryless.exe (your_ps1_script)
  <br /><br /><br />
 powershellveryless_2.cs installutil" version: <br />
 
-Launch it: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\installutil  /logfile= /LogToConsole=false /ScriptName=((your_ps1_script) /U (exefile)
+Launch it: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\installutil  /logfile= /LogToConsole=false /ScriptName=(your_ps1_script) /U (exefile)
 
