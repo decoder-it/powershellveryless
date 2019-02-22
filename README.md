@@ -11,8 +11,5 @@ C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe /reference: C:\Windows\M
  <br />
 powershellveryless_2.cs: "installutil" version <br />
 
-```
-
 C:\Windows\Microsoft.NET\Framework64\v4.0.30319\installutil  /logfile= /LogToConsole=false /ScriptName=(ps1) /U (exefile)
 
-```
