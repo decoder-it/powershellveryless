@@ -7,9 +7,9 @@ C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe /reference: C:\Windows\M
 /out:c:\setup\powershellveryless.exe c:\scripts\powershellveryless.cs
 ```
 <br />
-Launch it: powerhsellveryless.exe (your_ps1_sript)
+Launch it: powerhsellveryless.exe (your_ps1_script)
  <br /><br /><br />
 powershellveryless_2.cs installutil" version: <br />
 
-Launch it: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\installutil  /logfile= /LogToConsole=false /ScriptName=(ps1) /U (exefile)
+Launch it: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\installutil  /logfile= /LogToConsole=false /ScriptName=((your_ps1_script) /U (exefile)
 
