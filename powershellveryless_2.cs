@@ -20,7 +20,15 @@ namespace PSLess
  
 class PSLess
  {
-   public static void Main(string[] args)
+   [DllImport("kernel32")]
+        public static extern IntPtr GetProcAddress(IntPtr hModule, string procName);
+        [DllImport("kernel32")]
+        public static extern IntPtr LoadLibrary(string name);
+        [DllImport("kernel32")]
+        public static extern bool VirtualProtect(IntPtr lpAddress, UIntPtr dwSize, uint flNewProtect, out uint lpflOldProtect);
+        [DllImport("Kernel32.dll", EntryPoint = "RtlMoveMemory", SetLastError = false)]
+        static extern void MoveMemory(IntPtr dest, IntPtr src, int size);
+	public static void Main(string[] args)
    {
      if (args.Length == 0)
        Environment.Exit(1);
