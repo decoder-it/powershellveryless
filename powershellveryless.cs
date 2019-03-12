@@ -1,4 +1,4 @@
-//2019-04-13 addded quick&dirty fix in order to bypass latest Defender definitions and new AMSI bypass
+//2019-03-13 addded quick&dirty fix in order to bypass latest Defender definitions and new AMSI bypass
 //https://github.com/rasta-mouse/AmsiScanBufferBypass/blob/master/ASBBypass/Program.cs
 using System.Collections.ObjectModel;
 using System.Management.Automation;
