@@ -2,6 +2,7 @@
 == Constrained Language Mode + AMSI bypass all in one ==<br /><br />
 Quick & dirty (and very simple) CL + AMSI bypass using C#<br />
 
+<br>2019-03-19: addded a new quick&dirty fix in order to bypass latest Defender definitions
 <br>2019-03-13: addded quick&dirty fix in order to bypass latest Defender definitions and integrate new AMSI bypass
 <br>https://github.com/rasta-mouse/AmsiScanBufferBypass/blob/master/ASBBypass/Program.cs
 
