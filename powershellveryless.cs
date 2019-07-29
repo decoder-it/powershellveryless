@@ -23,11 +23,7 @@ namespace PSLess
       
        
 	
-       public static int Disable()
-          {
-            string hexbuffer = "41 6d 73 69 53 63 61 6e 42 75 66 66 65 72";
-	    string buffer="";
-	    string[] hexbuffersplit = hexbuffer.Split(' ');
+     
 	public static int Disable()
         {
             string hexbuffer = "41;6d;73;69;53;63;61;6e;42;75;66;66;65;72";
